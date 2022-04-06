@@ -5,6 +5,8 @@
  */
 package co.id.mii.mcc63lmsclientapp.controller;
 
+import co.id.mii.mcc63lmsclientapp.service.CourseService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,10 +18,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
     
-    @GetMapping("/home")
-    public String home(Model model) {
-        model.addAttribute("name", "Agung");
-        model.addAttribute("address", "Jakarta");
+    private CourseService courseService;
+
+    @Autowired
+    public HomeController(CourseService courseService) {
+        this.courseService = courseService;
+    }
+    
+    @GetMapping
+    public String getAll(Model model) {
+        model.addAttribute("courses", courseService.getAll());
         return "index";
     }
 }
