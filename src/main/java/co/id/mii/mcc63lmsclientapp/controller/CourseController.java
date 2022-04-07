@@ -6,8 +6,10 @@
 package co.id.mii.mcc63lmsclientapp.controller;
 
 import co.id.mii.mcc63lmsclientapp.model.Course;
+import co.id.mii.mcc63lmsclientapp.model.Dto.CourseData;
 import co.id.mii.mcc63lmsclientapp.model.Dto.ResponseData;
 import co.id.mii.mcc63lmsclientapp.service.CourseService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -44,39 +46,37 @@ public class CourseController {
         return "course/index";
     }
 
-    @GetMapping("/new")
-    public String create() {
-        return "course/create";
+    @GetMapping("/all")
+    public @ResponseBody
+    ResponseEntity<List<Course>> getAll() {
+        return ResponseEntity.ok(courseService.getAll());
     }
 
     @PostMapping("/new")
-    public @ResponseBody ResponseEntity create(@RequestBody Course course, BindingResult result) {
+    public @ResponseBody
+    ResponseEntity create(@RequestBody CourseData courseData, BindingResult result) {
         if (result.hasErrors()) {
             return new ResponseEntity<>(result.getAllErrors(), HttpStatus.BAD_REQUEST);
         }
 
-        courseService.create(course);
+        courseService.create(courseData);
         return ResponseEntity.ok(new ResponseData("success", "Course created"));
     }
 
-    @GetMapping("/edit/{id}")
-    public String update(@PathVariable("id") Long id, Model model) {
-        model.addAttribute("course", courseService.getById(id));
-        return "course/update";
-    }
-
     @PutMapping("/edit/{id}")
-    public @ResponseBody ResponseEntity update(@PathVariable("id") Long id, @RequestBody Course course, BindingResult result) {
+    public @ResponseBody
+    ResponseEntity update(@PathVariable("id") Long id, @RequestBody CourseData courseData, BindingResult result) {
         if (result.hasErrors()) {
             return new ResponseEntity<>(result.getAllErrors(), HttpStatus.BAD_REQUEST);
         }
 
-        courseService.update(id, course);
+        courseService.update(id, courseData);
         return ResponseEntity.ok(new ResponseData("success", "Course updated"));
     }
 
     @DeleteMapping("/delete/{id}")
-    public @ResponseBody ResponseEntity delete(@PathVariable("id") Long id) {
+    public @ResponseBody
+    ResponseEntity delete(@PathVariable("id") Long id) {
         courseService.delete(id);
         return ResponseEntity.ok(new ResponseData("success", "Course deleted"));
     }

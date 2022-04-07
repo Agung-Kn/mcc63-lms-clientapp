@@ -22,5 +22,6 @@ public class CourseData {
     private String title;
     private String description;
     private Long price;
+    private Long userId;
     private Long categoryId;
 }
