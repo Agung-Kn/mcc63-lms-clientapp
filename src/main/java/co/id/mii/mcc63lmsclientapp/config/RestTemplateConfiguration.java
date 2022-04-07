@@ -5,6 +5,9 @@
  */
 package co.id.mii.mcc63lmsclientapp.config;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 /**
  *
  * @author Agung

@@ -156,6 +156,14 @@
 	}
 
 	/**
+   * NAV-TABS 
+   */
+
+	.nav-tabs h2 {
+		font-size: 37px;
+	}
+        
+	/**
    * CONTACT 
    */
 
@@ -197,6 +205,14 @@
 		right: -100px;
 	}
 
+	/**
+   * #NAV-TABS 
+   */
+
+	.nav-tabs-card {
+		padding: 40px 60px;
+	}
+        
 	/**
    * #CONTACT 
    */
@@ -261,8 +277,9 @@
 		display: block;
 	}
 
+
 	/**
-   * #HOME 
+   * #HOME
    */
 
 	.home {
@@ -297,7 +314,37 @@
 	.home-btn-group {
 		justify-content: start;
 	}
+        
+	/**
+   * #DASHBOARD
+   */
+	.dashboard {
+		align-items: center;
+	}
 
+	.dashboard::before {
+		top: -100px;
+		left: -300px;
+	}
+
+	.dashboard::after {
+		top: 0;
+	}
+
+	.dashboard-left {
+		margin-bottom: 0;
+	}
+
+	.dashboard .section-subtitle,
+	.main-heading,
+	.dashboard .section-text {
+		text-align: left;
+	}
+
+	.dashboard .section-text {
+		margin: 0 0 30px;
+	}
+        
 	/**
    * #Learner 
    */
@@ -364,8 +411,8 @@
 
 	.course .btn-primary {
 		position: absolute;
-		top: 130px;
-		right: var(--px);
+		top: 8px;
+		right: 0;
 	}
 
 	/**
@@ -420,6 +467,23 @@
 	}
 
 	/**
+   * #NAV-TABS 
+   */
+
+	.nav-tabs-card {
+		grid-template-columns: 1fr;
+	}
+
+	.nav-tabs-card h2 {
+		text-align: center;
+	}
+
+	.nav-tabs .btn-primary {
+		justify-self: end;
+		align-self: center;
+	}
+        
+	/**
    * #CONTACT 
    */
 
@@ -465,10 +529,22 @@
    */
 
 	.home-left {
-		padding-bottom: var(--py);
+		margin-bottom: var(--py);
 	}
 
 	.home .section-text {
+		font-size: 18px;
+	}
+        
+	/**
+   * #DASHBOARD
+   */
+
+	.dashboard-left {
+		margin-bottom: var(--py);
+	}
+
+	.dashboard .section-text {
 		font-size: 18px;
 	}
 
@@ -496,6 +572,14 @@
 		grid-template-columns: repeat(4, 1fr);
 	}
 
+	/**
+   * #NAV-TABS
+   */
+
+	.nav-tabs-card h2 {
+		font-size: 45px;
+	}
+        
 	/**
    * #CONTACT 
    */

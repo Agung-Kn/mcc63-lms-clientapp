@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.id.mii.mcc63lmsclientapp.model.Dto;
+package co.id.mii.mcc63lmsclientapp.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 /**
  *
  * @author Agung
@@ -15,8 +17,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ResponseData {
-
-    private String status;
-    private String message;
+@Builder
+public class Course {
+    
+    private Long id;
+    private String title;
+    private String description; 
+    private Long price;
 }
