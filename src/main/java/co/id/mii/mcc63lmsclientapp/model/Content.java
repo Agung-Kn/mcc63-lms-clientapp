@@ -3,11 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.id.mii.mcc63lmsclientapp.model.Dto;
+package co.id.mii.mcc63lmsclientapp.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.web.multipart.MultipartFile;
+
 /**
  *
  * @author Agung
@@ -15,8 +18,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ResponseData {
+@Builder
+public class Content {
 
-    private String status;
-    private String message;
+    private Long id;
+    private String title;
+    private String description;
+    private MultipartFile fileName;
 }
