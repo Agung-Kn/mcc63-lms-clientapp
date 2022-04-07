@@ -115,7 +115,7 @@
 					<h2 class="section-title">Find The Right Online Course For You</h2>
 
 					<div class="course-grid">
-						<div class="course-card">
+						<div class="course-card" th:each="course : ${courses}">
 							<div class="course-banner">
 								<img src="images/course-1.jpg" alt="course banner" />
 								<div class="course-tag-box">
@@ -126,7 +126,7 @@
 
 							<div class="course-content">
 								<h3 class="card-title">
-									<a href="#">Become product manager learn skills.</a>
+									<a href="#" th:text="${course.title}">Become product manager learn skills.</a>
 								</h3>
 
 								<div class="wrapper border-bottom">
@@ -136,16 +136,16 @@
 								</div>
 
 								<div class="wrapper">
-									<div class="course-price">$50.00</div>
+									<div class="course-price" th:text="'Rp ' + ${course.price}">$50.00</div>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<button class="btn btn-primary">
+					<a th:href="@{course}" class="btn btn-primary">
 						<p class="btn-text">View All Course</p>
 						<span class="square"></span>
-					</button>
+					</a>
 				</section>
 
 				<!-- #COURSE CATEGORY SECTION -->
