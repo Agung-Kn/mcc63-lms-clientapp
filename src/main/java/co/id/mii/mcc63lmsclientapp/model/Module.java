@@ -22,4 +22,5 @@ public class Module {
     
     private Long id;
     private String title;
+    private Course course;
 }

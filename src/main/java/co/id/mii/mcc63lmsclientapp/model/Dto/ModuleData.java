@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.id.mii.mcc63lmsclientapp.model;
+package co.id.mii.mcc63lmsclientapp.model.Dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,12 +16,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class Content {
+public class ModuleData {
 
     private Long id;
     private String title;
-    private String description;
-    private String video;
-    private Module module;
+    private Long courseId;
 }

@@ -1,347 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Educator - Online Courses & Education</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Educator - Online Courses & Education</title>
 
-		<!-- custom css link -->
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/media_queries.css" />
-		<link rel="stylesheet" href="css/animation.css" />
+        <!-- css cdn link-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="https://cdn.datatables.net/v/bs5/dt-1.11.5/datatables.min.css" rel="stylesheet" type="text/css"/>
+		
+        <!-- custom css link -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/media_queries.css" />
+        <link rel="stylesheet" href="css/animation.css" />
 
-		<!-- google font link -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-	</head>
-	<body>
-		<!-- main container -->
-		<div class="container">
-			<!-- #HEADER -->
-			<header>
-				<nav class="navbar">
-					<div class="navbar-brand">
-						<img src="images/logo.png" alt="Educator Logo" />
-					</div>
+        <!-- google font link -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- main container -->
+        <div class="custom-container">
+            <!-- #HEADER -->
+            <header>
+                <div class="custom-navbar">
+                    <div class="custom-navbar-brand">
+                        <img src="images/logo.png" alt="Educator Logo" />
+                    </div>
 
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a href="#home">Home</a>
-						</li>
-						<li class="nav-item">
-							<a href="#course">Courses</a>
-						</li>
-						<li class="nav-item">
-							<a href="#category">Category</a>
-						</li>
-						<li class="nav-item">
-							<a href="#join">Join Us</a>
-						</li>
-						<li class="nav-item">
-							<a href="#contact">Contact Us</a>
-						</li>
-					</ul>
+                    <ul class="custom-navbar-nav">
+                        <li class="custom-nav-item">
+                            <a th:href="@{/}">Home</a>
+                        </li>
+                        <li class="custom-nav-item">
+                            <a th:href="@{/all-course}">Courses</a>
+                        </li>
+                        <li class="custom-nav-item">
+                            <a href="#category">Category</a>
+                        </li>
+                        <li class="custom-nav-item">
+                            <a href="#join">Join Us</a>
+                        </li>
+                        <li class="custom-nav-item">
+                            <a href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
 
-					<button class="btn btn-primary">
-						<p class="btn-text">Try for free</p>
-						<span class="square"></span>
-					</button>
+                    <a class="custom-btn custom-btn-primary">
+                        <p class="custom-btn-text">Sign In</p>
+                        <span class="square"></span>
+                    </a>
 
-					<button class="nav-toggle-btn">
-						<span class="one"></span>
-						<span class="two"></span>
-						<span class="three"></span>
-					</button>
-				</nav>
-			</header>
+                    <button class="nav-toggle-btn">
+                        <span class="one"></span>
+                        <span class="two"></span>
+                        <span class="three"></span>
+                    </button>
+                </div>
+            </header>
 
-			<main>
-				<!-- #HOME SECTION -->
-				<section class="home" id="home">
-					<div class="deco-shape shape-1">
-						<img src="images/shape-1.png" alt="art shape" width="70" />
-					</div>
-					<div class="deco-shape shape-2">
-						<img src="images/shape-2.png" alt="art shape" width="55" />
-					</div>
-					<div class="deco-shape shape-3">
-						<img src="images/shape-3.png" alt="art shape" width="120" />
-					</div>
-					<div class="deco-shape shape-4">
-						<img src="images/shape-4.png" alt="art shape" width="30" />
-					</div>
+            <main>
+                <!-- #HOME SECTION -->
+                <section class="home" id="home">
+                    <div class="deco-shape shape-1">
+                        <img src="images/shape-1.png" alt="art shape" width="70" />
+                    </div>
+                    <div class="deco-shape shape-2">
+                        <img src="images/shape-2.png" alt="art shape" width="55" />
+                    </div>
+                    <div class="deco-shape shape-3">
+                        <img src="images/shape-3.png" alt="art shape" width="120" />
+                    </div>
+                    <div class="deco-shape shape-4">
+                        <img src="images/shape-4.png" alt="art shape" width="30" />
+                    </div>
 
-					<div class="home-left">
-						<p class="section-subtitle">Welcome To Online Coaching</p>
+                    <div class="home-left">
+                        <p class="section-subtitle">Welcome To Online Coaching</p>
 
-						<h1 class="main-heading">
-							Get Class From Top
-							<span class="underline-img">Instructor <img src="images/banner-line.png" alt="line" /></span>
-						</h1>
+                        <h1 class="main-heading">
+                            Get Class From Top
+                            <span class="underline-img">Instructor <img src="images/banner-line.png" alt="line" /></span>
+                        </h1>
 
-						<p class="section-text">Integer in magna in est ultrices bibendum eget enim et dui imperdiet faucibus. Fusce eu tristique felis.</p>
+                        <p class="section-text">Integer in magna in est ultrices bibendum eget enim et dui imperdiet faucibus. Fusce eu tristique felis.</p>
 
-						<div class="home-btn-group">
-							<button class="btn btn-primary">
-								<p class="btn-text">Explore Courses</p>
-								<span class="square"></span>
-							</button>
+                        <div class="home-btn-group">
+                            <button class="custom-btn custom-btn-primary">
+                                <p class="custom-btn-text">Explore Courses</p>
+                                <span class="square"></span>
+                            </button>
 
-							<button class="btn btn-secondary">
-								<p class="btn-text">Contact Us</p>
-								<span class="square"></span>
-							</button>
-						</div>
-					</div>
+                            <button class="custom-btn custom-btn-secondary">
+                                <p class="custom-btn-text">Contact Us</p>
+                                <span class="square"></span>
+                            </button>
+                        </div>
+                    </div>
 
-					<div class="home-right">
-						<div class="img-box">
-							<img src="images/banner-img-bg.png" alt="colorful background shape" class="background-shape" />
-							<img src="images/banner-img.png" alt="banner image" class="banner-img" />
+                    <div class="home-right">
+                        <div class="img-box">
+                            <img src="images/banner-img-bg.png" alt="colorful background shape" class="background-shape" />
+                            <img src="images/banner-img.png" alt="banner image" class="banner-img" />
 
-							<img src="images/banner-aliment-icon-1.png" alt="" class="icon-1 smooth-zigzag-anim-1" width="250" />
-							<img src="images/banner-aliment-icon-2.png" alt="" class="icon-2 smooth-zigzag-anim-2" width="240" />
-							<img src="images/banner-aliment-icon-3.png" alt="" class="icon-3 smooth-zigzag-anim-3" width="195" />
-							<img src="images/banner-aliment-icon-4.png" alt="" class="icon-4 drop-anim" />
-						</div>
-					</div>
-				</section>
+                            <img src="images/banner-aliment-icon-1.png" alt="" class="icon-1 smooth-zigzag-anim-1" width="250" />
+                            <img src="images/banner-aliment-icon-2.png" alt="" class="icon-2 smooth-zigzag-anim-2" width="240" />
+                            <img src="images/banner-aliment-icon-3.png" alt="" class="icon-3 smooth-zigzag-anim-3" width="195" />
+                            <img src="images/banner-aliment-icon-4.png" alt="" class="icon-4 drop-anim" />
+                        </div>
+                    </div>
+                </section>
 
-				<!-- #COURSE SECTION -->
-				<section class="course" id="course">
-					<p class="section-subtitle">Our Online Courses</p>
-					<h2 class="section-title">Find The Right Online Course For You</h2>
+                <!-- #COURSE SECTION -->
+                <section class="course" id="course">
+                    <p class="section-subtitle">Our Online Courses</p>
+                    <h2 class="section-title">Find The Right Online Course For You</h2>
 
-					<div class="course-grid">
-						<div class="course-card" th:each="course : ${courses}">
-							<div class="course-banner">
-								<img src="images/course-1.jpg" alt="course banner" />
-								<div class="course-tag-box">
-									<a href="#" class="badge-tag orange">Business</a>
-									<a href="#" class="badge-tag blue">Marketing</a>
-								</div>
-							</div>
+                    <div class="course-grid">
+                        <div class="course-card" th:each="course : ${courses}">
+                            <div class="course-banner">
+                                <img src="images/course-1.jpg" alt="course banner" />
+                                <div class="course-tag-box">
+                                    <a href="#" class="badge-tag orange">Business</a>
+                                    <a href="#" class="badge-tag blue">Marketing</a>
+                                </div>
+                            </div>
 
-							<div class="course-content">
-								<h3 class="card-title">
-									<a href="#" th:text="${course.title}">Become product manager learn skills.</a>
-								</h3>
+                            <div class="course-content">
+                                <h3 class="card-title">
+                                    <a href="#" th:text="${course.title}">Become product manager learn skills.</a>
+                                </h3>
 
-								<div class="wrapper border-bottom">
-									<div class="author">
-										<a href="#" class="author-name">Lillian Wals</a>
-									</div>
-								</div>
+                                <div class="wrapper border-bottom">
+                                    <div class="author">
+                                        <a href="#" class="author-name">Lillian Wals</a>
+                                    </div>
+                                </div>
 
-								<div class="wrapper">
-									<div class="course-price" th:text="'Rp ' + ${course.price}">$50.00</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                                <div class="wrapper">
+                                    <div class="course-price" th:text="'Rp ' + ${course.price}">$50.00</div>
+                                </div>
+                            </div>
+                        </div>
 
-					<a th:href="@{course}" class="btn btn-primary">
-						<p class="btn-text">View All Course</p>
-						<span class="square"></span>
-					</a>
-				</section>
+                    </div>
 
-				<!-- #COURSE CATEGORY SECTION -->
-				<section class="category" id="category">
-					<p class="section-subtitle">Course Category</p>
-					<h2 class="section-title">Explore Popular Courses</h2>
+                    <a th:href="@{/all-course}" class="custom-btn custom-btn-primary">
+                        <p class="custom-btn-text">View All Course</p>
+                        <span class="square"></span>
+                    </a>
+                </section>
 
-					<ul class="course-item-group">
-						<li class="course-category-item" th:each="category : ${categories}">
-							<div class="course-category-content">
-								<h3 class="category-title">
-									<a href="#" th:text="${category.name}">Learn Data Science</a>
-								</h3>
-								<p class="category-subtitle">Data is Everything</p>
-							</div>
-						</li>
-					</ul>
-				</section>
+                <!-- #COURSE CATEGORY SECTION -->
+                <section class="category" id="category">
+                    <p class="section-subtitle">Course Category</p>
+                    <h2 class="section-title">Explore Popular Courses</h2>
 
-				<!-- #JOIN US LEARNER SECTION -->
-				<section class="learner" id="join">
-					<div class="learner-left">
-						<div class="img-box">
-							<img src="images/about-img-bg.png" alt="learner bg" class="learner-bg" />
-							<img src="images/about-img.png" alt="learner person" class="learner-img" />
-							<img src="images/banner-aliment-icon-1.png" alt="" class="icon-1 smooth-zigzag-anim-1" width="250" />
-							<img src="images/banner-aliment-icon-3.png" alt="" class="icon-2 smooth-zigzag-anim-3" width="195" />
-						</div>
-					</div>
+                    <ul class="course-item-group">
+                        <li class="course-category-item" th:each="category : ${categories}">
+                            <div class="course-category-content">
+                                <h3 class="category-title">
+                                    <a href="#" th:text="${category.name}">Learn Data Science</a>
+                                </h3>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
 
-					<div class="learner-right">
-						<p class="section-subtitle">Join as Learner</p>
-						<h2 class="section-title">We Have Best Online Education</h2>
-						<p class="section-text">
-							Morbi porttitor ligula id varius consectetur. Integer ipsum justo, congue sit amet massa vel, porttitor semper magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						</p>
+                <!-- #JOIN US LEARNER SECTION -->
+                <section class="learner" id="join">
+                    <div class="learner-left">
+                        <div class="img-box">
+                            <img src="images/about-img-bg.png" alt="learner bg" class="learner-bg" />
+                            <img src="images/about-img.png" alt="learner person" class="learner-img" />
+                            <img src="images/banner-aliment-icon-1.png" alt="" class="icon-1 smooth-zigzag-anim-1" width="250" />
+                            <img src="images/banner-aliment-icon-3.png" alt="" class="icon-2 smooth-zigzag-anim-3" width="195" />
+                        </div>
+                    </div>
 
-						<ul class="learner-ul">
-							<li>
-								<ion-icon name="checkmark-circle"></ion-icon>
-								<p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
-							</li>
-							<li>
-								<ion-icon name="checkmark-circle"></ion-icon>
-								<p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
-							</li>
-							<li>
-								<ion-icon name="checkmark-circle"></ion-icon>
-								<p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
-							</li>
-						</ul>
+                    <div class="learner-right">
+                        <p class="section-subtitle">Join as Learner</p>
+                        <h2 class="section-title">We Have Best Online Education</h2>
+                        <p class="section-text">
+                            Morbi porttitor ligula id varius consectetur. Integer ipsum justo, congue sit amet massa vel, porttitor semper magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        </p>
 
-						<button class="btn btn-primary">
-							<p class="btn-text">Sign Up as Learner</p>
-							<span class="square"></span>
-						</button>
-					</div>
-				</section>
+                        <ul class="learner-ul">
+                            <li>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            <p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                            </li>
+                            <li>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            <p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                            </li>
+                            <li>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            <p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                            </li>
+                        </ul>
 
-				<!-- #JOIN US TEACHER SECTION -->
-				<section class="teacher">
-					<div class="teacher-left">
-						<p class="section-subtitle">Join as teacher</p>
-						<h2 class="section-title">We Have Best Online Education</h2>
-						<p class="section-text">
-							Morbi porttitor ligula id varius consectetur. Integer ipsum justo, congue sit amet massa vel, porttitor semper magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						</p>
+                        <button class="custom-btn custom-btn-primary">
+                            <p class="custom-btn-text">Sign Up As Learner</p>
+                            <span class="square"></span>
+                        </button>
+                    </div>
+                </section>
 
-						<ul class="teacher-ul">
-							<li>
-								<ion-icon name="checkmark-circle"></ion-icon>
-								<p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
-							</li>
-							<li>
-								<ion-icon name="checkmark-circle"></ion-icon>
-								<p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
-							</li>
-							<li>
-								<ion-icon name="checkmark-circle"></ion-icon>
-								<p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
-							</li>
-						</ul>
+                <!-- #JOIN US TEACHER SECTION -->
+                <section class="teacher">
+                    <div class="teacher-left">
+                        <p class="section-subtitle">Join as teacher</p>
+                        <h2 class="section-title">We Have Best Online Education</h2>
+                        <p class="section-text">
+                            Morbi porttitor ligula id varius consectetur. Integer ipsum justo, congue sit amet massa vel, porttitor semper magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        </p>
 
-						<button class="btn btn-primary">
-							<p class="btn-text">Sign Up as teacher</p>
-							<span class="square"></span>
-						</button>
-					</div>
+                        <ul class="teacher-ul">
+                            <li>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            <p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                            </li>
+                            <li>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            <p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                            </li>
+                            <li>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            <p>Suspendisse nunc massa, pellentesque eu nibh eget.</p>
+                            </li>
+                        </ul>
 
-					<div class="teacher-right">
-						<div class="img-box">
-							<img src="images/about-img-bg.png" alt="teacher bg" class="teacher-bg" />
-							<img src="images/banner-img.png" alt="teacher person" class="teacher-img" />
-							<img src="images/banner-aliment-icon-1.png" alt="" class="icon-1 smooth-zigzag-anim-1" width="250" />
-							<img src="images/banner-aliment-icon-3.png" alt="" class="icon-2 smooth-zigzag-anim-3" width="195" />
-						</div>
-					</div>
-				</section>
-			</main>
+                        <button class="custom-btn custom-btn-primary">
+                            <p class="custom-btn-text">Sign Up As Teacher</p>
+                            <span class="square"></span>
+                        </button>
+                    </div>
 
-			<!-- #FOOTER -->
-			<footer id="footer">
-				<div class="footer-grid">
-					<div class="grid-item">
-						<div class="footer-logo">
-							<img src="images/logo-footer.png" alt="educator logo white" />
-						</div>
+                    <div class="teacher-right">
+                        <div class="img-box">
+                            <img src="images/about-img-bg.png" alt="teacher bg" class="teacher-bg" />
+                            <img src="images/banner-img.png" alt="teacher person" class="teacher-img" />
+                            <img src="images/banner-aliment-icon-1.png" alt="" class="icon-1 smooth-zigzag-anim-1" width="250" />
+                            <img src="images/banner-aliment-icon-3.png" alt="" class="icon-2 smooth-zigzag-anim-3" width="195" />
+                        </div>
+                    </div>
+                </section>
+            </main>
 
-						<p class="footer-text">Duis a tempor magna. Maecenas ligula felis, imperdiet quis arcu eget, blandit ultricies risus. Vivamus fringilla urna vel risus congue accumsan.</p>
+            <!-- #FOOTER -->
+            <footer id="footer">
+                <div class="footer-grid">
+                    <div class="grid-item">
+                        <div class="footer-logo">
+                            <img src="images/logo-footer.png" alt="educator logo white" />
+                        </div>
 
-						<div class="social-link">
-							<a href="#">
-								<ion-icon name="logo-facebook"></ion-icon>
-							</a>
-							<a href="#">
-								<ion-icon name="logo-instagram"></ion-icon>
-							</a>
-							<a href="#">
-								<ion-icon name="logo-twitter"></ion-icon>
-							</a>
-							<a href="#">
-								<ion-icon name="logo-youtube"></ion-icon>
-							</a>
-						</div>
-					</div>
+                        <p class="footer-text">Duis a tempor magna. Maecenas ligula felis, imperdiet quis arcu eget, blandit ultricies risus. Vivamus fringilla urna vel risus congue accumsan.</p>
 
-					<ul class="grid-item">
-						<h4 class="item-heading">Our Link</h4>
+                        <div class="social-link">
+                            <a href="#">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                            <a href="#">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                            <a href="#">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                            <a href="#">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
 
-						<li class="list-item">
-							<a href="#home">Home</a>
-						</li>
+                    <ul class="grid-item">
+                        <h4 class="item-heading">Our Link</h4>
 
-						<li class="list-item">
-							<a href="#about">About Us</a>
-						</li>
+                        <li class="list-item">
+                            <a href="#home">Home</a>
+                        </li>
 
-						<li class="list-item">
-							<a href="#course">Courses</a>
-						</li>
+                        <li class="list-item">
+                            <a href="#about">About Us</a>
+                        </li>
 
-						<li class="list-item">
-							<a href="#blog">Blog</a>
-						</li>
+                        <li class="list-item">
+                            <a href="#course">Courses</a>
+                        </li>
 
-						<li class="list-item">
-							<a href="#contact">Contact Us</a>
-						</li>
-					</ul>
+                        <li class="list-item">
+                            <a href="#blog">Blog</a>
+                        </li>
 
-					<ul class="grid-item">
-						<h4 class="item-heading">Other Link</h4>
+                        <li class="list-item">
+                            <a href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
 
-						<li class="list-item">
-							<a href="#">Instructor</a>
-						</li>
+                    <ul class="grid-item">
+                        <h4 class="item-heading">Other Link</h4>
 
-						<li class="list-item">
-							<a href="#">FAQ</a>
-						</li>
+                        <li class="list-item">
+                            <a href="#">Instructor</a>
+                        </li>
 
-						<li class="list-item">
-							<a href="#">Event</a>
-						</li>
+                        <li class="list-item">
+                            <a href="#">FAQ</a>
+                        </li>
 
-						<li class="list-item">
-							<a href="#">Privacy Policy</a>
-						</li>
+                        <li class="list-item">
+                            <a href="#">Event</a>
+                        </li>
 
-						<li class="list-item">
-							<a href="#">Term & Condition</a>
-						</li>
-					</ul>
+                        <li class="list-item">
+                            <a href="#">Privacy Policy</a>
+                        </li>
 
-					<div class="grid-item">
-						<h4 class="item-heading">Subscribe Now</h4>
+                        <li class="list-item">
+                            <a href="#">Term & Condition</a>
+                        </li>
+                    </ul>
 
-						<div class="wrapper">
-							<input type="text" name="subscribe" placeholder="Email Address" />
+                    <div class="grid-item">
+                        <h4 class="item-heading">Subscribe Now</h4>
 
-							<button class="send-btn">
-								<ion-icon name="paper-plane"></ion-icon>
-							</button>
-						</div>
-					</div>
-				</div>
+                        <div class="wrapper">
+                            <input type="text" name="subscribe" placeholder="Email Address" />
 
-				<p class="copyright">Copyright © 2022 <a href="#">codewithsadee</a>. All rights reserved.</p>
-			</footer>
-		</div>
+                            <button class="send-btn">
+                                <ion-icon name="paper-plane"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-		<!-- custom js link -->
-		<script src="js/script.js"></script>
+                <p class="copyright">Copyright © 2022 <a href="#">codewithsadee</a>. All rights reserved.</p>
+            </footer>
+        </div>
 
-		<!-- ionicon link -->
-		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-	</body>
+        <!-- custom js link -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/v/bs5/dt-1.11.5/datatables.min.js" type="text/javascript"></script>
+        <script src="js/script.js"></script>
+
+        <!-- ionicon link -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
 </html>

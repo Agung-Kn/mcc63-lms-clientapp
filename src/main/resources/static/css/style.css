@@ -73,7 +73,7 @@ html {
   #COMPONENT
 \*-----------------------------------*/
 
-.btn {
+.custom-btn {
     position: relative;
     font-family: 'Roboto', sans-serif;
     font-size: var(--fs-6);
@@ -85,17 +85,18 @@ html {
     overflow: hidden;
 }
 
-.btn .btn-text {
+.custom-btn .custom-btn-text {
     position: relative;
+    margin-bottom: 0;
     z-index: 5;
 }
 
-.btn-primary,
-.btn-secondary .square {
+.custom-btn-primary,
+.custom-btn-secondary {
     background: var(--red-orange-color-wheel);
 }
 
-.btn .square {
+.custom-btn .square {
     position: absolute;
     top: 50%;
     right: 20px;
@@ -106,14 +107,18 @@ html {
     transition: var(--default-transition);
 }
 
-.btn:hover .square {
+.custom-btn:hover {
+    color: var(--white);
+}
+
+.custom-btn:hover .square {
     right: -2px;
     width: 102%;
     height: 102%;
 }
 
-.btn-primary .square,
-.btn-secondary {
+.custom-btn-primary .square,
+.custom-btn-secondary {
     background: var(--oxford-blue);
 }
 
@@ -145,7 +150,7 @@ html {
   #MAIN
 \*-----------------------------------*/
 
-.container {
+.custom-container {
     background: var(--white);
     max-width: 1440px;
     margin: auto;
@@ -156,7 +161,7 @@ html {
   #HEADER 
 \*-----------------------------------*/
 
-.navbar {
+.custom-navbar {
     position: fixed;
     top: 0;
     left: 50%;
@@ -173,7 +178,7 @@ html {
     z-index: 100;
 }
 
-.navbar-nav {
+.custom-navbar-nav {
     position: absolute;
     background: var(--white);
     top: calc(100% + 40px);
@@ -188,7 +193,7 @@ html {
     pointer-events: none;
 }
 
-.nav-item a {
+.custom-nav-item a {
     padding: 10px;
     font-size: var(--fs-5);
     font-weight: var(--fw-6);
@@ -196,15 +201,15 @@ html {
     transition: var(--default-transition);
 }
 
-.nav-item:not(:last-child) a {
+.custom-nav-item:not(:last-child) a {
     border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
 }
 
-.nav-item a:hover {
+.custom-nav-item a:hover {
     color: var(--red-orange-color-wheel);
 }
 
-.navbar-nav.active {
+.custom-navbar-nav.active {
     animation: menuPopup 0.5s ease forwards;
     pointer-events: all;
 }
@@ -225,7 +230,7 @@ html {
     }
 }
 
-.navbar .btn {
+.custom-navbar .custom-btn {
     display: none;
 }
 
@@ -880,7 +885,12 @@ html {
     border-radius: 50%;
 }
 
-.course .btn-primary {
+.course .custom-btn-primary {
+    display: block;
+    margin: auto;
+}
+
+.custom-btn-create .custom-btn-primary {
     display: block;
     margin: auto;
 }
@@ -1385,11 +1395,11 @@ html {
 /*-----------------------------------*\
   #NAV-TABS
 \*-----------------------------------*/
-.nav-tabs {
+.custom-nav-tabs {
     position: relative;
 }
 
-.nav-tabs-card {
+.custom-nav-tabs-card {
     position: absolute;
     top: 0;
     left: 50%;
@@ -1404,7 +1414,7 @@ html {
     overflow: hidden;
 }
 
-.nav-tabs-card-bg {
+.custom-nav-tabs-card-bg {
     position: absolute;
     width: auto;
     max-width: 100%;
@@ -1412,7 +1422,7 @@ html {
     left: -2px;
 }
 
-.nav-tabs-card a {
+.custom-nav-tabs-card a {
     position: relative;
     font-size: 18px;
     color: var(--white);
@@ -1420,7 +1430,7 @@ html {
     text-align: center;
 }
 
-.nav-tabs-card a:hover {
+.custom-nav-tabs-card a:hover {
     color: var(--sonic-silver);
 }
 
@@ -1462,7 +1472,7 @@ html {
     text-align: center;
 }
 
-.contact .btn-primary {
+.contact .custom-btn-primary {
     justify-self: center;
 }
 

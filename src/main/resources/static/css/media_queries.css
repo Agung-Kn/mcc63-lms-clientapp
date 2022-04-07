@@ -7,584 +7,589 @@
  */
 
 @media (min-width: 375px) {
-	/**
-   * VARIABLE 
-   */
+    /**
+* VARIABLE 
+*/
 
-	:root {
-		--fs-1: 50px;
-		--fs-2: 45px;
-		--fs-7: 18px;
+    :root {
+        --fs-1: 50px;
+        --fs-2: 45px;
+        --fs-7: 18px;
 
-		--px: 30px;
-	}
+        --px: 30px;
+    }
 
-	.section-subtitle {
-		font-size: var(--fs-7);
-	}
+    .section-subtitle {
+        font-size: var(--fs-7);
+    }
 
-	/**
-   * HOME 
-   */
+    /**
+* HOME 
+*/
 
-	.home-right .icon-1 {
-		top: 250px;
-	}
+    .home-right .icon-1 {
+        top: 250px;
+    }
 
-	.home-right .icon-2 {
-		display: block;
-		top: 370px;
-		right: 50px;
-	}
+    .home-right .icon-2 {
+        display: block;
+        top: 370px;
+        right: 50px;
+    }
 
-	.home-right .icon-3 {
-		display: block;
-		top: 450px;
-		left: 0;
-	}
+    .home-right .icon-3 {
+        display: block;
+        top: 450px;
+        left: 0;
+    }
 
-	.home-right .icon-4 {
-		width: 60px;
-		top: 150px;
-		right: 50px;
-	}
+    .home-right .icon-4 {
+        width: 60px;
+        top: 150px;
+        right: 50px;
+    }
 
-	/**
-   * Learner 
-   */
+    /**
+* Learner 
+*/
 
-	.learner-left .icon-1 {
-		top: 150px;
-	}
+    .learner-left .icon-1 {
+        top: 150px;
+    }
 
-	.learner-left .icon-2 {
-		display: block;
-		top: 270px;
-		right: 0;
-	}
+    .learner-left .icon-2 {
+        display: block;
+        top: 270px;
+        right: 0;
+    }
 
-	/**
-   * Teacher 
-   */
+    /**
+* Teacher 
+*/
 
-	.teacher-right .icon-1 {
-		top: 150px;
-	}
+    .teacher-right .icon-1 {
+        top: 150px;
+    }
 
-	.teacher-right .icon-2 {
-		display: block;
-		top: 270px;
-		right: 0;
-	}
+    .teacher-right .icon-2 {
+        display: block;
+        top: 270px;
+        right: 0;
+    }
 }
 
 @media (min-width: 575px) {
-	/**
-   * VARIABLE 
-   */
+    /**
+* VARIABLE 
+*/
 
-	:root {
-		--px: 40px;
-	}
+    :root {
+        --px: 40px;
+    }
 
-	/**
-   * HOME 
-   */
+    /**
+* HOME 
+*/
 
-	.home .shape-1 img {
-		width: 100px;
-	}
+    .home .shape-1 img {
+        width: 100px;
+    }
 
-	.home .shape-3 img {
-		width: 250px;
-	}
+    .home .shape-3 img {
+        width: 250px;
+    }
 
-	/**
-   * Learner 
-   */
+    /**
+* Learner 
+*/
 
-	.learner-left .icon-1 {
-		top: 200px;
-	}
+    .learner-left .icon-1 {
+        top: 200px;
+    }
 
-	.learner-left .icon-2 {
-		top: 350px;
-	}
+    .learner-left .icon-2 {
+        top: 350px;
+    }
 
-	/**
-   * Teacher 
-   */
+    /**
+* Teacher 
+*/
 
-	.teacher-right .icon-1 {
-		top: 200px;
-	}
+    .teacher-right .icon-1 {
+        top: 200px;
+    }
 
-	.teacher-right .icon-2 {
-		top: 350px;
-	}
+    .teacher-right .icon-2 {
+        top: 350px;
+    }
 
-	/**
-   * EVENT 
-   */
+    /**
+* EVENT 
+*/
 
-	.event .play {
-		right: -20px;
-	}
+    .event .play {
+        right: -20px;
+    }
 
-	.event-card {
-		display: flex;
-		align-items: center;
-		text-align: left;
-	}
+    .event-card {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
 
-	.event-card .content-left {
-		width: 100px;
-		padding-bottom: 0;
-		margin-bottom: 0;
-		padding-right: 15px;
-		margin-right: 25px;
-		box-shadow: 1px 0 0 0 var(--light-gray);
-	}
+    .event-card .content-left {
+        width: 100px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        padding-right: 15px;
+        margin-right: 25px;
+        box-shadow: 1px 0 0 0 var(--light-gray);
+    }
 
-	.event .schedule {
-		justify-content: start;
-		margin-bottom: 5px;
-	}
+    .event .schedule {
+        justify-content: start;
+        margin-bottom: 5px;
+    }
 
-	.event-card .event-name {
-		text-align: left;
-	}
+    .event-card .event-name {
+        text-align: left;
+    }
 
-	/**
-   * NAV-TABS 
-   */
+    /**
+* NAV-TABS 
+*/
 
-	.nav-tabs h2 {
-		font-size: 37px;
-	}
-        
-	/**
-   * CONTACT 
-   */
+    .custom-nav-tabs h2 {
+        font-size: 37px;
+    }
 
-	.contact h2 {
-		font-size: 37px;
-	}
+    /**
+* CONTACT 
+*/
+
+    .contact h2 {
+        font-size: 37px;
+    }
 }
 
 @media (min-width: 767px) {
-	/**
-   * VARIABLE 
-   */
+    /**
+* VARIABLE 
+*/
 
-	:root {
-		--fs-1: 60px;
-		--fs-2: 50px;
-		--fs-7: 20px;
+    :root {
+        --fs-1: 60px;
+        --fs-2: 50px;
+        --fs-7: 20px;
 
-		--px: 60px;
-	}
+        --px: 60px;
+    }
 
-	/**
-   * #CATEGORY, COURSE, INSTRUCTOR, BLOG, FOOTER
-   */
+    /**
+* #CATEGORY, COURSE, INSTRUCTOR, BLOG, FOOTER
+*/
 
-	.category .course-item-group,
-	.course-grid,
-	.instructor-grid,
-	.blog-grid,
-	.footer-grid {
-		grid-template-columns: 1fr 1fr;
-	}
+    .category .course-item-group,
+    .course-grid,
+    .instructor-grid,
+    .blog-grid,
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 
-	/**
-   * #EVENT 
-   */
+    /**
+* #EVENT 
+*/
 
-	.event .play {
-		right: -100px;
-	}
+    .event .play {
+        right: -100px;
+    }
 
-	/**
-   * #NAV-TABS 
-   */
+    /**
+* #NAV-TABS 
+*/
 
-	.nav-tabs-card {
-		padding: 40px 60px;
-	}
-        
-	/**
-   * #CONTACT 
-   */
+    .custom-nav-tabs-card {
+        padding: 40px 60px;
+    }
 
-	.contact-card {
-		padding: 40px 60px;
-	}
+    /**
+* #CONTACT 
+*/
+
+    .contact-card {
+        padding: 40px 60px;
+    }
 }
 
 @media (min-width: 850px) {
-	/**
-   * #VARIABLE 
-   */
+    /**
+* #VARIABLE 
+*/
 
-	:root {
-		--px: 140px;
-	}
+    :root {
+        --px: 140px;
+    }
 }
 
 @media (min-width: 992px) {
-	/**
-   * #VARIABLE 
-   */
+    /**
+* #VARIABLE 
+*/
 
-	:root {
-		--fs-5: 16px;
+    :root {
+        --fs-5: 16px;
 
-		--px: 30px;
-		--py: 120px;
-	}
+        --px: 30px;
+        --py: 120px;
+    }
 
-	/**
-   * #HEADER 
-   */
+    /**
+* #HEADER 
+*/
 
-	.navbar {
-		padding: 20px var(--px);
-	}
+    .custom-navbar {
+        padding: 20px var(--px);
+    }
 
-	.navbar-nav {
-		background: transparent;
-		position: static;
-		box-shadow: none;
-		padding: 0;
-		opacity: 1;
-		transform: scale(1);
-		pointer-events: all;
-		display: flex;
-		align-items: center;
-		gap: 20px;
-	}
+    .custom-navbar-nav {
+        background: transparent;
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: all;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 
-	.nav-item:not(:last-child) a {
-		border-bottom: none;
-	}
+    .custom-nav-item:not(:last-child) a {
+        border-bottom: none;
+    }
 
-	.nav-toggle-btn {
-		display: none;
-	}
+    .nav-toggle-btn {
+        display: none;
+    }
 
-	.navbar .btn {
-		display: block;
-	}
+    .custom-navbar .custom-btn {
+        display: block;
+    }
 
 
-	/**
-   * #HOME
-   */
+    /**
+* #HOME
+*/
 
-	.home {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		align-items: center;
-	}
+    .home {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
 
-	.home::before {
-		top: -100px;
-		left: -300px;
-	}
+    .home::before {
+        top: -100px;
+        left: -300px;
+    }
 
-	.home::after {
-		top: 0;
-	}
+    .home::after {
+        top: 0;
+    }
 
-	.home-left {
-		margin-bottom: 0;
-	}
+    .home-left {
+        margin-bottom: 0;
+    }
 
-	.home .section-subtitle,
-	.main-heading,
-	.home .section-text {
-		text-align: left;
-	}
+    .home .section-subtitle,
+    .main-heading,
+    .home .section-text {
+        text-align: left;
+    }
 
-	.home .section-text {
-		margin: 0 0 30px;
-	}
+    .home .section-text {
+        margin: 0 0 30px;
+    }
 
-	.home-btn-group {
-		justify-content: start;
-	}
-        
-	/**
-   * #DASHBOARD
-   */
-	.dashboard {
-		align-items: center;
-	}
+    .home-btn-group {
+        justify-content: start;
+    }
 
-	.dashboard::before {
-		top: -100px;
-		left: -300px;
-	}
+    /**
+* #DASHBOARD
+*/
+    .dashboard {
+        align-items: center;
+    }
 
-	.dashboard::after {
-		top: 0;
-	}
+    .dashboard::before {
+        top: -100px;
+        left: -300px;
+    }
 
-	.dashboard-left {
-		margin-bottom: 0;
-	}
+    .dashboard::after {
+        top: 0;
+    }
 
-	.dashboard .section-subtitle,
-	.main-heading,
-	.dashboard .section-text {
-		text-align: left;
-	}
+    .dashboard-left {
+        margin-bottom: 0;
+    }
 
-	.dashboard .section-text {
-		margin: 0 0 30px;
-	}
-        
-	/**
-   * #Learner 
-   */
+    .dashboard .section-subtitle,
+    .main-heading,
+    .dashboard .section-text {
+        text-align: left;
+    }
 
-	.learner {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		align-items: end;
-		gap: 40px;
-	}
+    .dashboard .section-text {
+        margin: 0 0 30px;
+    }
 
-	.learner-left {
-		margin-left: -70px;
-	}
+    /**
+* #Learner 
+*/
 
-	.learner-left img {
-		max-width: unset;
-	}
+    .learner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: end;
+        gap: 40px;
+    }
 
-	.learner-right {
-		padding-top: 0;
-	}
+    .learner-left {
+        margin-left: -70px;
+    }
 
-	/**
-   * #Teacher 
-   */
+    .learner-left img {
+        max-width: unset;
+    }
 
-	.teacher {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		align-items: end;
-		gap: 40px;
-	}
+    .learner-right {
+        padding-top: 0;
+    }
 
-	.teacher-right {
-		margin-left: -70px;
-	}
+    /**
+* #Teacher 
+*/
 
-	.teacher-right img {
-		max-width: unset;
-	}
+    .teacher {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: end;
+        gap: 40px;
+    }
 
-	.teacher-left {
-		padding-top: 0;
-	}
+    .teacher-right {
+        margin-left: -70px;
+    }
 
-	/**
-   * #COURSE 
-   */
+    .teacher-right img {
+        max-width: unset;
+    }
 
-	.course {
-		position: relative;
-	}
+    .teacher-left {
+        padding-top: 0;
+    }
 
-	.course .section-subtitle,
-	.course .section-title {
-		max-width: 600px;
-	}
+    /**
+* #COURSE 
+*/
 
-	.course-grid {
-		grid-template-columns: repeat(3, 1fr);
-		margin-bottom: 0;
-	}
+    .course {
+        position: relative;
+    }
 
-	.course .btn-primary {
-		position: absolute;
-		top: 8px;
-		right: 0;
-	}
+    .course .section-subtitle,
+    .course .section-title {
+        max-width: 600px;
+    }
 
-	/**
-   * #EVENT 
-   */
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 0;
+    }
 
-	.event {
-		display: grid;
-		grid-template-columns: 2fr 3fr;
-		gap: 50px;
-		align-items: center;
-	}
+    .course .custom-btn-primary {
+        position: absolute;
+        top: 8px;
+        right: 0;
+    }
 
-	.event-left {
-		margin-bottom: 0;
-	}
+    .custom-btn-create .custom-btn-primary {
+        top: 8px;
+        right: 0;
+    }
 
-	.event .play {
-		right: -10px;
-	}
+    /**
+* #EVENT 
+*/
 
-	/**
-   * #FEATURES 
-   */
+    .event {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 50px;
+        align-items: center;
+    }
 
-	.features {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
+    .event-left {
+        margin-bottom: 0;
+    }
 
-	.features-right {
-		height: auto;
-	}
+    .event .play {
+        right: -10px;
+    }
 
-	/**
-   * #TESTIMONIALS 
-   */
+    /**
+* #FEATURES 
+*/
 
-	.testimonials {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 50px;
-		align-items: center;
-	}
+    .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
-	/**
-   * #BLOG 
-   */
+    .features-right {
+        height: auto;
+    }
 
-	.blog-grid {
-		grid-template-columns: repeat(3, 1fr);
-	}
+    /**
+* #TESTIMONIALS 
+*/
 
-	/**
-   * #NAV-TABS 
-   */
+    .testimonials {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+    }
 
-	.nav-tabs-card {
-		grid-template-columns: 1fr;
-	}
+    /**
+* #BLOG 
+*/
 
-	.nav-tabs-card h2 {
-		text-align: center;
-	}
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-	.nav-tabs .btn-primary {
-		justify-self: end;
-		align-self: center;
-	}
-        
-	/**
-   * #CONTACT 
-   */
+    /**
+* #NAV-TABS 
+*/
 
-	.contact-card {
-		grid-template-columns: 1fr 1fr;
-	}
+    .custom-nav-tabs-card {
+        grid-template-columns: 1fr;
+    }
 
-	.contact-card h2 {
-		text-align: left;
-	}
+    .custom-nav-tabs-card h2 {
+        text-align: center;
+    }
 
-	.contact .btn-primary {
-		justify-self: end;
-		align-self: center;
-	}
+    .custom-nav-tabs .custom-btn-primary {
+        justify-self: end;
+        align-self: center;
+    }
 
-	/**
-   * #FOOTER 
-   */
+    /**
+* #CONTACT 
+*/
 
-	.footer-grid {
-		grid-template-columns: 2fr 1fr 1fr 2fr;
-	}
+    .contact-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-card h2 {
+        text-align: left;
+    }
+
+    .contact .custom-btn-primary {
+        justify-self: end;
+        align-self: center;
+    }
+
+    /**
+* #FOOTER 
+*/
+
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 2fr;
+    }
 }
 
 @media (min-width: 1200px) {
-	/**
-   * #VARIABLE 
-   */
+    /**
+* #VARIABLE 
+*/
 
-	:root {
-		--fs-1: 70px;
-		--fs-2: 55px;
-		--fs-3: 40px;
-		--fs-4: 25px;
-		--fs-7: 22px;
+    :root {
+        --fs-1: 70px;
+        --fs-2: 55px;
+        --fs-3: 40px;
+        --fs-4: 25px;
+        --fs-7: 22px;
 
-		--px: 120px;
-	}
+        --px: 120px;
+    }
 
-	/**
-   * #HOME 
-   */
+    /**
+* #HOME 
+*/
 
-	.home-left {
-		margin-bottom: var(--py);
-	}
+    .home-left {
+        margin-bottom: var(--py);
+    }
 
-	.home .section-text {
-		font-size: 18px;
-	}
-        
-	/**
-   * #DASHBOARD
-   */
+    .home .section-text {
+        font-size: 18px;
+    }
 
-	.dashboard-left {
-		margin-bottom: var(--py);
-	}
+    /**
+* #DASHBOARD
+*/
 
-	.dashboard .section-text {
-		font-size: 18px;
-	}
+    .dashboard-left {
+        margin-bottom: var(--py);
+    }
 
-	/**
-   * #CATEGORY 
-   */
+    .dashboard .section-text {
+        font-size: 18px;
+    }
 
-	.category .course-item-group {
-		grid-template-columns: repeat(3, 1fr);
-	}
+    /**
+* #CATEGORY 
+*/
 
-	/**
-   * #EVENT 
-   */
+    .category .course-item-group {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-	.event {
-		grid-template-columns: 1fr 1fr;
-	}
+    /**
+* #EVENT 
+*/
 
-	/**
-   * #INSTRUCTOR 
-   */
+    .event {
+        grid-template-columns: 1fr 1fr;
+    }
 
-	.instructor-grid {
-		grid-template-columns: repeat(4, 1fr);
-	}
+    /**
+* #INSTRUCTOR 
+*/
 
-	/**
-   * #NAV-TABS
-   */
+    .instructor-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-	.nav-tabs-card h2 {
-		font-size: 45px;
-	}
-        
-	/**
-   * #CONTACT 
-   */
+    /**
+* #NAV-TABS
+*/
 
-	.contact-card h2 {
-		font-size: 45px;
-	}
+    .custom-nav-tabs-card h2 {
+        font-size: 45px;
+    }
+
+    /**
+* #CONTACT 
+*/
+
+    .contact-card h2 {
+        font-size: 45px;
+    }
 }
