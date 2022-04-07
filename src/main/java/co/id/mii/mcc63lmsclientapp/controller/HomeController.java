@@ -17,16 +17,16 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 @Controller
 public class HomeController {
-    
+
     private CourseService courseService;
 
     @Autowired
     public HomeController(CourseService courseService) {
         this.courseService = courseService;
     }
-    
+
     @GetMapping
-    public String getAll(Model model) {
+    public String index(Model model) {
         model.addAttribute("courses", courseService.getAll());
         return "index";
     }
