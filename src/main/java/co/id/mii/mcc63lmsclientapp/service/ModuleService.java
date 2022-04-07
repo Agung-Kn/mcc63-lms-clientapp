@@ -5,6 +5,7 @@
  */
 package co.id.mii.mcc63lmsclientapp.service;
 
+import co.id.mii.mcc63lmsclientapp.model.Dto.ModuleData;
 import co.id.mii.mcc63lmsclientapp.model.Module;
 import java.util.ArrayList;
 import java.util.List;
@@ -73,27 +74,27 @@ public class ModuleService {
         return module;
     }
     
-    public void create(Module module) {
+    public void create(ModuleData moduleData) {
         try {
             restTemplate.exchange(
                                 url,
                                 HttpMethod.POST, 
-                                new HttpEntity<>(module), 
-                                new ParameterizedTypeReference<Module>() {}
+                                new HttpEntity<>(moduleData), 
+                                new ParameterizedTypeReference<ModuleData>() {}
                             );
         } catch (ResponseStatusException ex) {
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, ex.getMessage());
         }
     }
     
-    public void update(Long id, Module module) {
+    public void update(Long id, ModuleData moduleData) {
         try {
-            module.setId(id);
+            moduleData.setId(id);
             restTemplate.exchange(
                                 url.concat("/" + id), 
                                 HttpMethod.PUT, 
-                                new HttpEntity<>(module), 
-                                new ParameterizedTypeReference<Module>() {}
+                                new HttpEntity<>(moduleData), 
+                                new ParameterizedTypeReference<ModuleData>() {}
                             );
         } catch (ResponseStatusException ex) {
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, ex.getMessage());
@@ -106,7 +107,7 @@ public class ModuleService {
                             url.concat("/" + id), 
                             HttpMethod.DELETE, 
                             null, 
-                            new ParameterizedTypeReference<Module>() {}
+                            new ParameterizedTypeReference<ModuleData>() {}
                         );
         } catch (ResponseStatusException ex) {
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, ex.getMessage());
