@@ -28,7 +28,7 @@ public class CategoryService {
 
     private RestTemplate restTemplate;
 
-    @Value("{app.baseUrl}/category")
+    @Value("${app.baseUrl}/category")
     private String url;
 
     @Autowired
