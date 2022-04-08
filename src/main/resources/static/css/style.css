@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2022 @codewithsadee 
+ * copyright 2022 @codewithsadee
  */
 
 /*-----------------------------------*\
@@ -158,7 +158,7 @@ html {
 }
 
 /*-----------------------------------*\
-  #HEADER 
+  #HEADER
 \*-----------------------------------*/
 
 .custom-navbar {
@@ -1596,7 +1596,7 @@ footer {
     text-align: center;
     color: var(--lavender-blue);
     font-size: var(--fs-6);
-    font-family: 'Roboto' sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 15px var(--px);
     line-height: 1.7;
 }
@@ -1609,4 +1609,12 @@ footer {
 
 .copyright a:hover {
     color: var(--ultramarine-blue);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.text-black {
+    color: black;
 }

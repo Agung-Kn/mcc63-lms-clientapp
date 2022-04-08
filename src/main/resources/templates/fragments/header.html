@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+  </head>
+  <body>
+    <header th:fragment="header">
+      <div class="custom-navbar">
+        <div class="custom-navbar-brand">
+          <a th:href="@{/}" class="custom-btn custom-btn-secondary">
+            <p class="custom-btn-text">📚 Pandemy</p>
+            <span class="square"></span>
+          </a>
+        </div>
+
+        <ul class="custom-navbar-nav">
+          <li class="custom-nav-item">
+            <a th:href="@{/}">Home</a>
+          </li>
+          <li class="custom-nav-item">
+            <a th:href="@{/courses}">Courses</a>
+          </li>
+          <li class="custom-nav-item">
+            <a href="#category">Category</a>
+          </li>
+          <li class="custom-nav-item">
+            <a href="#join">Join Us</a>
+          </li>
+          <li class="custom-nav-item">
+            <a href="#contact">Contact Us</a>
+          </li>
+        </ul>
+
+        <a class="custom-btn custom-btn-primary">
+          <p class="custom-btn-text">Sign In</p>
+          <span class="square"></span>
+        </a>
+
+        <button class="nav-toggle-btn">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+      </div>
+    </header>
+  </body>
+</html>

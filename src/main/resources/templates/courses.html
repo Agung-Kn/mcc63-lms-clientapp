@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{fragments/layout}">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pandemy - Online Courses & Education</title>
+    </head>
+    <body>
+
+        <div layout:fragment="content">
+
+            <main>
+                <!-- #COURSE SECTION -->
+                <section class="course" id="course">
+                    <p class="section-subtitle">Our Online Courses</p>
+                    <h2 class="section-title">Find The Right Online Course For You</h2>
+
+                    <div class="course-grid">
+                        <div class="course-card" th:each="course : ${courses}">
+                            <div class="course-banner">
+                                <img th:src="${course.courseImage}" th:alt="${course.title}" />
+                                <div class="course-tag-box">
+                                    <a href="#" class="badge-tag orange" th:text="${course.category.name}">Business</a>
+                                </div>
+                            </div>
+
+                            <div class="course-content">
+                                <h3 class="card-title">
+                                    <a href="#" th:text="${course.title}">Become product manager learn skills.</a>
+                                </h3>
+
+                                <div class="wrapper border-bottom">
+                                    <div class="author">
+                                        <a href="#" class="author-name"
+                                            th:text="${course.user.profile.fullName}">Lillian Wals</a>
+                                    </div>
+                                </div>
+
+                                <div class="wrapper">
+                                    <div class="course-price" th:text="'Rp ' + ${course.price}">$50.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+    </body>
+</html>
