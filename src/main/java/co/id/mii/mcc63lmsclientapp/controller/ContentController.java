@@ -6,16 +6,20 @@
 package co.id.mii.mcc63lmsclientapp.controller;
 
 import co.id.mii.mcc63lmsclientapp.model.Content;
+import co.id.mii.mcc63lmsclientapp.model.Dto.ContentData;
 import co.id.mii.mcc63lmsclientapp.model.Dto.ResponseData;
 import co.id.mii.mcc63lmsclientapp.service.ContentService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -30,6 +34,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/content")
 public class ContentController {
+
     private ContentService contentService;
 
     @Autowired
@@ -43,24 +48,30 @@ public class ContentController {
         return "content/index";
     }
 
+    @GetMapping("/all")
+    public @ResponseBody
+    ResponseEntity<List<Content>> getAll() {
+        return ResponseEntity.ok(contentService.getAll());
+    }
+
     @GetMapping("/{id}")
     public String getById(@PathVariable("id") Long id, Model model) {
         model.addAttribute("content", contentService.getById(id));
         return "content/detail";
     }
 
-    @PostMapping("/create")
+    @PostMapping("/new")
     public @ResponseBody
-    ResponseEntity create(@RequestBody Content content, BindingResult result) {
+    ResponseEntity create(@ModelAttribute ContentData contentData, BindingResult result) {
         if (result.hasErrors()) {
             return new ResponseEntity<>(result.getAllErrors(), HttpStatus.BAD_REQUEST);
         }
 
-        contentService.create(content);
+        contentService.create(contentData);
         return ResponseEntity.ok(new ResponseData("success", "Content has been successfully added."));
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/edit/{id}")
     public @ResponseBody
     ResponseEntity update(@PathVariable("id") Long id, @RequestBody Content content, BindingResult result) {
         if (result.hasErrors()) {
@@ -69,7 +80,7 @@ public class ContentController {
         contentService.update(id, content);
         return ResponseEntity.ok(new ResponseData("success", "Content has been successfully updated."));
     }
-    
+
     @DeleteMapping("/delete/{id}")
     public @ResponseBody
     ResponseEntity delete(@PathVariable("id") Long id) {

@@ -5,9 +5,11 @@
  */
 package co.id.mii.mcc63lmsclientapp.controller;
 
+import co.id.mii.mcc63lmsclientapp.model.Dto.ModuleData;
 import co.id.mii.mcc63lmsclientapp.model.Dto.ResponseData;
 import co.id.mii.mcc63lmsclientapp.model.Module;
 import co.id.mii.mcc63lmsclientapp.service.ModuleService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +32,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/module")
 public class ModuleController {
-    
+
     private ModuleService moduleService;
 
     @Autowired
@@ -44,31 +46,37 @@ public class ModuleController {
         return "module/index";
     }
 
+    @GetMapping("/all")
+    public @ResponseBody
+    ResponseEntity<List<Module>> getAll() {
+        return ResponseEntity.ok(moduleService.getAll());
+    }
+
     @GetMapping("/{id}")
     public String getById(@PathVariable("id") Long id, Model model) {
         model.addAttribute("module", moduleService.getById(id));
         return "module/detail";
     }
 
-    @PostMapping("/create")
+    @PostMapping("/new")
     public @ResponseBody
-    ResponseEntity create(@RequestBody Module module, BindingResult result) {
+    ResponseEntity create(@RequestBody ModuleData moduleData, BindingResult result) {
         if (result.hasErrors()) {
             return new ResponseEntity<>(result.getAllErrors(), HttpStatus.BAD_REQUEST);
         }
 
-        moduleService.create(module);
+        moduleService.create(moduleData);
         return ResponseEntity.ok(new ResponseData("success", "Module has been successfully added."));
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/edit/{id}")
     public @ResponseBody
-    ResponseEntity update(@PathVariable("id") Long id, @RequestBody Module module, BindingResult result) {
+    ResponseEntity update(@PathVariable("id") Long id, @RequestBody ModuleData moduleData, BindingResult result) {
         if (result.hasErrors()) {
             return new ResponseEntity<>(result.getAllErrors(), HttpStatus.BAD_REQUEST);
         }
 
-        moduleService.update(id, module);
+        moduleService.update(id, moduleData);
         return ResponseEntity.ok(new ResponseData("success", "Module has been successfully updated."));
     }
 

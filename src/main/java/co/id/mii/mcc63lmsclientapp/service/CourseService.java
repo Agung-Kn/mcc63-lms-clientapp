@@ -6,6 +6,7 @@
 package co.id.mii.mcc63lmsclientapp.service;
 
 import co.id.mii.mcc63lmsclientapp.model.Course;
+import co.id.mii.mcc63lmsclientapp.model.Dto.CourseData;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,27 +73,27 @@ public class CourseService {
         return course;
     }
 
-    public void create(Course course) {
+    public void create(CourseData courseData) {
         try {
             restTemplate.exchange(
                     url,
                     HttpMethod.POST,
-                    new HttpEntity<>(course),
-                    new ParameterizedTypeReference<Course>() {
+                    new HttpEntity<>(courseData),
+                    new ParameterizedTypeReference<CourseData>() {
             });
         } catch (ResponseStatusException ex) {
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, ex.getMessage());
         }
     }
 
-    public void update(Long id, Course course) {
+    public void update(Long id, CourseData courseData) {
         try {
-            course.setId(id);
+            courseData.setId(id);
             restTemplate.exchange(
                     url.concat("/" + id),
                     HttpMethod.PUT,
-                    new HttpEntity<>(course),
-                    new ParameterizedTypeReference<Course>() {
+                    new HttpEntity<>(courseData),
+                    new ParameterizedTypeReference<CourseData>() {
             });
         } catch (ResponseStatusException ex) {
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, ex.getMessage());
@@ -105,7 +106,7 @@ public class CourseService {
                     url.concat("/" + id),
                     HttpMethod.DELETE,
                     null,
-                    new ParameterizedTypeReference<Course>() {
+                    new ParameterizedTypeReference<CourseData>() {
             });
         } catch (ResponseStatusException ex) {
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, ex.getMessage());

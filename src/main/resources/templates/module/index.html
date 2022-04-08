@@ -8,7 +8,7 @@
 
         <!-- css cdn link-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link href="https://cdn.datatables.net/v/bs5/dt-1.11.5/datatables.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.5/datatables.min.css"/>
 
         <!-- custom css link -->
         <link rel="stylesheet" href="css/style.css" />
@@ -98,20 +98,19 @@
 
                 <!-- #COURSE SECTION -->
                 <section class="course" id="course">
-                    <p class="section-subtitle">Courses</p>
+                    <p class="section-subtitle">Module</p>
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <button class="btn btn-primary" onclick="setCourseId(null)" data-bs-toggle="modal" data-bs-target="#course-modal-form">Add New Course</button>
+                            <button class="btn btn-primary" onclick="setModuleId(null)" data-bs-toggle="modal" data-bs-target="#module-modal-form">Add New Module</button>
                         </div>
                         <div class="card-body">
-                            <table class="table table-hover table-bordered" id="course-table">
+                            <table class="table table-hover table-bordered" id="module-table">
                                 <thead>
                                     <tr>
                                         <th>No</th>
                                         <th>Title</th>
-                                        <th>Price</th>
-                                        <th>Category</th>
+                                        <th>Course</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -214,7 +213,7 @@
         </div>
 
         <!-- Course Modal Form -->
-        <div class="modal fade" id="course-modal-form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="module-modal-form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -222,8 +221,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form id="course-form" class="needs-validation" novalidate>
-                            <input type="hidden" id="userId" name="userId" value="1">
+                        <form id="module-form" class="needs-validation" novalidate>
                             <div class="row">
                                 <div class="col">         
                                     <label for="title" class="form-label">Title</label>
@@ -236,28 +234,8 @@
 
                             <div class="row">
                                 <div class="col">
-                                    <label for="description" class="form-label">Description</label>
-                                    <textarea class="form-control" id="description" name="description" rows="3"></textarea>
-                                    <div class="invalid-feedback">
-                                        Valid Name is required.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col">         
-                                    <label for="price" class="form-label">Price</label>
-                                    <input type="number" class="form-control" id="price" name="price" required>
-                                    <div class="invalid-feedback">
-                                        Valid Title is required.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col">
-                                    <label for="categoryId" class="form-label">Category</label>
-                                    <select class="form-select" id="categoryId" name="categoryId" required>
+                                    <label for="courseId" class="form-label">Course</label>
+                                    <select class="form-select" id="courseId" name="courseId" required>
                                         <option selected value="">Choose...</option>
                                     </select>
                                     <div class="invalid-feedback">
@@ -280,7 +258,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/v/bs5/dt-1.11.5/datatables.min.js" type="text/javascript"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="/js/course.js"></script>
+        <script src="/js/module.js"></script>
         <script src="/js/script.js"></script>
 
         <!-- ionicon link -->
